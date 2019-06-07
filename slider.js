@@ -52,9 +52,7 @@ let elements = create_link(currentSlider.url);
 }
 
 
-
-
-left.addEventListener('click', function (){
+function leftArrow (){
     if (current_index  >=  sliderData.length - 1){
         current_index  = 0 - 1;
        
@@ -65,11 +63,9 @@ left.addEventListener('click', function (){
     }
     console.log('Left');
     console.log(current_index);
-}); 
+}
 
-
-
-right.addEventListener('click', function (){
+function rightArrow (){
     if (current_index == 0){
         current_index = sliderData.length;
     }
@@ -78,9 +74,24 @@ right.addEventListener('click', function (){
         indexSlider(current_index);
     }
     console.log(current_index);
-     
+}
+
+
+
+left.addEventListener('click', function (){
+    leftArrow();
+}); 
+
+
+
+right.addEventListener('click', function (){  
+    rightArrow();
 });
 
+
+setInterval(function (){
+    leftArrow();
+}, 5000)
 
 
 indexSlider(current_index);
