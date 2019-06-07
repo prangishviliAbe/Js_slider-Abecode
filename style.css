@@ -21,3 +21,8 @@
     cursor: pointer;
 }
 
+
+#slider {
+    display: block;
+    overflow: hidden;
+}

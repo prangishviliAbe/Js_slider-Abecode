@@ -94,4 +94,15 @@ setInterval(function (){
 }, 5000)
 
 
+var next = 1;
+setInterval(function (){
+  var dp = next += 0.001;
+  document.getElementsByTagName('img')[0].style.transform = "scale("+dp+")";
+
+}, 100);
+
+
+
+
+
 indexSlider(current_index);
