@@ -58,6 +58,7 @@ let createLink = (url) => { //Create link
 let createImg = (img) => {
    let imgElement = document.createElement('img');
        imgElement.src = img;
+       imgElement.id = 'imgSlider';
        return imgElement;
 }
 
@@ -125,10 +126,14 @@ let effectControl = () => {
 	    title.style.animation = 'titleAnimation 1s 1';
 	    title.style.display = 'flex';
 	    title.style.left = '30px';
-
-
 }
 
+
+let nextSlideEffect = () => {
+	let sliderNext = document.getElementById('imgSlider');
+	    sliderNext.style.animation = 'nextSlider 2s 1';
+	    console.log(sliderNext);
+}
 
 
 
@@ -136,10 +141,11 @@ let effectControl = () => {
 //for effect 
 setInterval(()=>{
  effectControl();
+
 }, 100);
 
 setInterval(()=>{ //next slide
   leftArrow();
-  
+   nextSlideEffect();
 }, 5000);
 

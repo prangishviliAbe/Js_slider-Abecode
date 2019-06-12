@@ -7,6 +7,7 @@
 	align-items: center;
 }
 
+
 #slider #title {
     background-color: white;
     color: black;
@@ -22,10 +23,10 @@
 	height: 470px;
 }
 
+
 #slider-wrapper #slider img {
 	width: 100%;
 	height: 470px;
-
 }
 
 #slider-wrapper #left,#right, a {
@@ -45,6 +46,11 @@
 
 
 @keyframes  titleAnimation {
-    from {left: -20px; opacity: 0.1; }
-    to   {left: 20px; opacity: 1; }
+    from { left: -20px; opacity: 0.1; }
+    to   { left: 20px; opacity: 1; }
+}
+
+@keyframes nextSlider {
+	from { opacity: 0;}
+    to   { opacity: 1; }
 }
